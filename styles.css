@@ -50,7 +50,7 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #c0baba;
+    color: #76aaee;
     text-decoration: underline;
 }
 
@@ -66,3 +66,35 @@ body {
     width: 100%;
     padding: 50px 0;
 }
+
+.encadre-bleu {
+  background-color: #448ae6; 
+    padding: 20px; /
+}
+
+.contenu {
+    display: flex; 
+}
+
+
+.image {
+    margin-left: 25%; 
+
+}
+
+.image img 
+{
+    width: 100%;
+    height: auto;
+}
+
+.titre
+{
+    color: aliceblue;
+    margin: 0;
+    margin-left: 10%; 
+    font-size: 150%;
+    white-space: nowrap;
+        
+}
+
