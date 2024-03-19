@@ -4,11 +4,12 @@
     left: 20px; 
     z-index: 9999; 
 
+
     
 }
 
 #logo img {
-    width: 150px;
+    width: 130px;
     height: auto; 
 }
 
@@ -20,9 +21,9 @@ body {
 
 .navbar {
     position: fixed;
-    top: 0;
+    top: 3;
     right: 0;
-    background-color: #ffffff;
+    background-color: #f5f0f0;
     padding: 10px 20px;
 }
 
@@ -45,13 +46,23 @@ body {
     color: #000000;
     text-decoration: none;
     padding: 5px 10px;
-    border-right: 1px solid #fff;
+
 }
 
 .navbar a:hover {
-    background-color: #919090;
+    background-color: #c0baba;
+    text-decoration: underline;
 }
 
-.navbar ul li a:hover {
-    background-color: #f0f0f0; 
+.separator
+{
+    margin: 0 10px; 
+    border-right: 1px solid #fce5e5; 
+    height: 20px; 
+}
+
+#hautdepage {
+    background-color: #f5f0f0;
+    width: 100%;
+    padding: 50px 0;
 }
