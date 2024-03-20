@@ -5,7 +5,7 @@ body {
 }
 
 #header {
-    background-color: #f5f0f0;
+    background-color: #ffffff;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,6 +19,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    background-color: #ffffff;
 }
 
 #logo img {
@@ -34,19 +35,40 @@ body {
 
 .navbar li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
 
 .navbar li:last-child {
     margin-right: 0;
 }
 
+.navbar li:not(:last-child) {
+    margin-right: 10px; 
+    color: rgb(2, 2, 2);
+}
+
+.navbar li:hover:not(:last-child) {
+    margin-right: 5px; 
+    color: rgb(2, 2, 2);
+}
+
 .navbar a {
-    color: #000;
+    color: #000000; 
     text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease; 
+}
+
+.navbar a:hover {
+    color:#2a15e785;
+    text-decoration: underline; 
+    
+
 }
 
 .bouton-contact {
+    
     background-color: #448ae6;
     color: #fff;
     border: none;
@@ -57,29 +79,35 @@ body {
 }
 
 .bouton-contact:hover {
-    background-color: #02203b;
+   
+    background-color: #177bd3;
     color: #fff;
 }
 
+
 .encadre-bleu {
-    background-color: #448ae6;
+    background-color: #3b7acc;
     padding: 20px;
-    margin-top: 70px; 
+    margin-top: 100px;
+     
 }
 
 .contenu {
     display: flex;
 }
 
-.image {
+.image-azad{
     margin-left: 5%;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
-.image img {
+.image-azad img {
     width: 100%;
     height: auto;
     box-shadow: #000;
     background-repeat: no-repeat;
+    
 }
 
 .titre {
@@ -103,7 +131,8 @@ body {
 }
 
 .bouton-decouvrir:hover {
-    background-color: #02203b;
+    color: #000; 
+    background-color: #ffffff;
 }
 
 
