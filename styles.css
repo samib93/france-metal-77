@@ -136,3 +136,60 @@ body {
 }
 
 
+h2
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+.image-propos img
+{
+    margin-left: 1100px;
+    margin-top: 40px;
+    max-width: 100%
+}
+
+.chapitre
+{
+    margin-left: 45%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 35px;
+}
+
+.thick-line-1 {
+    border: none;
+    border-top: 5px solid rgb(0, 52, 148); 
+    margin: 10px 0; 
+    margin-left: 42%;
+    width: 10%;
+  }
+
+.thick-line {
+    border: none;
+    border-top: 5px solid rgb(0, 52, 148); 
+    margin: 10px 0; 
+    margin-left: 47%;
+    width: 11%;
+  }
+  
+  .a-propos {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+.image-propos {
+    order: 1; 
+    margin-left: 1%; 
+}
+
+.image-propos img {
+    max-width: 100%;
+    height: auto;
+}
+
+.texte {
+    order: 1; 
+}
