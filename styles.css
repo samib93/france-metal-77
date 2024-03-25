@@ -142,13 +142,6 @@ h2
     font-size: 25px;
 }
 
-.image-propos img
-{
-    margin-left: 1100px;
-    margin-top: 40px;
-    max-width: 100%
-}
-
 .chapitre
 {
     margin-left: 45%;
@@ -163,6 +156,7 @@ h2
     margin: 10px 0; 
     margin-left: 42%;
     width: 10%;
+    margin-top: 50px;
   }
 
 .thick-line {
@@ -174,15 +168,18 @@ h2
   }
   
   .a-propos {
-    display: flex;
-    align-items: center;
     padding: 10px 20px;
     background-color: #ffffff;
 }
 
-.image-propos {
-    order: 1; 
-    margin-left: 1%; 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    vertical-align: top;
+    padding: 10px;
 }
 
 .image-propos img {
@@ -190,6 +187,9 @@ h2
     height: auto;
 }
 
-.texte {
-    order: 1; 
+.texte p {
+    margin-bottom: 40px; 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
 }
+
