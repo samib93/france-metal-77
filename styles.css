@@ -169,14 +169,15 @@ h2
   
   .a-propos {
     padding: 10px 20px;
-    background-image: url('/images/pngtree-blue-geometric-flat-business-card-background-image_243066.jpg');
+    background-image: url('images/pngtree-gradient-blue-background-abstract-picture-image_1911844.png');
     background-repeat: no-repeat;
-   
+    background-size: cover;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    
 }
 
 table td {
@@ -194,5 +195,26 @@ table td {
     margin-bottom: 40px; 
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carousel-inner img {
+    width: 25%; 
+    flex: 0 0 auto;
+}
+
+@keyframes carouselAnimation {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
 }
 
