@@ -221,7 +221,7 @@ table td {
 }
 
 .fond {
-    background-color: #007bff; /* Fond bleu */
+    background-color: #003670; /* Fond bleu */
     color: #ffffff; /* Texte blanc */
     padding: 20px; /* Espacement intérieur */
     display: flex; /* Utilisation de flexbox */
