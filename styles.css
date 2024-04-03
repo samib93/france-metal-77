@@ -169,7 +169,7 @@ h2
   
   .a-propos {
     padding: 10px 20px;
-    background-image: url('images/pngtree-gradient-blue-background-abstract-picture-image_1911844.png');
+    background-image: url('images/marbre.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -206,11 +206,13 @@ table td {
 .carousel-inner {
     display: flex;
     transition: transform 1s ease;
+    padding: 0; 
 }
 
 .carousel-inner img {
-    width: 25%; 
-    flex: 0 0 auto;
+    width: 500px; 
+    height: auto; 
+    margin-right: 20px; 
 }
 
 @keyframes carouselAnimation {
@@ -218,3 +220,35 @@ table td {
     100% { transform: translateX(-100%); }
 }
 
+.fond {
+    background-color: #007bff; /* Fond bleu */
+    color: #ffffff; /* Texte blanc */
+    padding: 20px; /* Espacement intérieur */
+    display: flex; /* Utilisation de flexbox */
+    flex-direction: column; /* Disposition en colonne */
+    align-items: center; /* Alignement des éléments au centre */
+}
+
+.row {
+    display: flex; /* Utilisation de flexbox pour chaque ligne */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    width: 100%; /* Largeur maximale */
+    margin-bottom: 10px; /* Marge en bas pour séparer les lignes */
+}
+
+.title, .content {
+    width: 30%; /* Largeur des éléments */
+}
+
+.title h4 {
+    margin: 0; /* Supprimer les marges par défaut */
+    font-size: 25px; /* Taille de police */
+    font-weight: bold; /* Mettre en gras les titres */
+}
+
+.content p {
+    margin: 0; /* Supprimer les marges par défaut */
+    font-size: 16px; /* Taille de police */
+    text-align: justify; /* Justifier le texte */
+    line-height: 1.5; /* Hauteur de ligne */
+}
