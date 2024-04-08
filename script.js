@@ -32,3 +32,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, intervalTime);
 });
+
+function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        let count = 0;
+        const speed = 1800; 
+        const increment = target / speed;
+
+        const updateCount = () => {
+            if (count < target) {
+                count += increment;
+                counter.textContent = Math.ceil(count);
+                setTimeout(updateCount, 1);
+            } else {
+                counter.textContent = target;
+            }
+        };
+
+        updateCount();
+    });
+}
+
+document.addEventListener('DOMContentLoaded', animateCounters);
