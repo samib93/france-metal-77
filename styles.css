@@ -337,13 +337,39 @@ table td {
 
     .footer-line1,.footer-line
     {
-    border: none;
-    border-top: 5px solid rgb(0, 52, 148);
-    width: calc(35% - 35px); 
-    margin: 0;
+        border: none;
+        border-top: 5px solid rgb(0, 52, 148);
+        width: calc(35% - 38px); 
+        margin: 0;
 
     }
 
-    .footer-line1 {
-        margin-left: auto;
+    .footer-line1 
+    {
+        flex-grow: 1;
+        border: none;
+        border-top: 5px solid rgb(0, 52, 148);
+        margin: 0;
+    }
+
+    .custom-class {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .footer-line-left {
+        margin-right: 40px; 
+    }
+    
+    .footer-line-right {
+        margin-left: 40px; 
+    }
+    
+    .custom-class p {
+        margin: 0;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
     }
