@@ -280,27 +280,70 @@ table td {
         height: auto;
         width: 500px;
         height: 500px;
-        object-fit: cover; /* Pour ajuster l'image à la taille de la div */
+        object-fit: cover; 
     }
     
     .rejoindre{
-        width: 500px;
-        height: 500px;
-        background-image: url('images/arriere_plan_bleu_fonce.jpg');
+        background-image: url('images/blue.avif');
         background-size: cover;
+        margin-bottom: 20px;
+        margin-top: 20px;
+
     }
     
-    .content .bouton-contact {
+    .content-bouton-contact {
         background-color: #448ae6;
         color: #fff;
         border: none;
         border-radius: 15px;
         padding: 10px 20px;
-        font-size: 16px;
+        font-size: 25px;
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
     
-    .content .bouton-contact:hover {
-        background-color: #177bd3;
+    .content-bouton-contact:hover {
+        color: #000; 
+        background-color: #c5c1c1;
+    }
+
+
+    .sous-titre{
+        font-size: 40px;
+    }
+
+    .footer img{
+        width: 400px;
+        height: 300px;
+        margin-left: 750px;
+        margin-top: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer h2{
+        margin-left: 750px;
+        font-size: 50px;
+    }
+    .footer p
+    {
+        margin-bottom :0.2em;        
+        font-size: 20px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+
+    .footer-line1,.footer-line
+    {
+    border: none;
+    border-top: 5px solid rgb(0, 52, 148);
+    width: calc(35% - 35px); 
+    margin: 0;
+
+    }
+
+    .footer-line1 {
+        margin-left: auto;
     }
