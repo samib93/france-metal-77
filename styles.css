@@ -373,3 +373,30 @@ table td {
         text-align: center;
         font-weight: bold;
     }
+
+    .gallery {
+        width: 100%;
+        text-align: center; 
+    }
+    
+    .icon {
+        display: inline-block; 
+        width: 30%; 
+        margin: 10px;
+    }
+    
+    .icon img {
+        display: block; 
+        margin: 0 auto; 
+        width: 100px;
+        height: auto;
+    }
+    
+    .icon p {
+        margin-top: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+                                                                    
