@@ -407,44 +407,63 @@ table td {
     }
                              
     
-    .contact-container {
-        width: 50%;
+    .body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .form-container {
+        max-width: 600px;
         margin: 50px auto;
         padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        color: #333;
+    }
+    
+    .form-content {
+        margin-top: 200px;
+    }
+    
+    .form-label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+    
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
     }
     
-    .contact-container h2 {
-        margin-bottom: 20px;
-    }
-    
-    .contact-container form {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .contact-container label {
-        margin-bottom: 5px;
-    }
-    
-    .contact-container input,
-    .contact-container textarea {
-        margin-bottom: 10px;
-        padding: 5px;
-        border-radius: 3px;
-        border: 1px solid #ccc;
-    }
-    
-    .contact-container button {
+    .form-textarea {
+        width: 100%;
         padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+    }
+    
+    .form-submit {
         background-color: #007bff;
         color: #fff;
         border: none;
-        border-radius: 3px;
+        padding: 10px 20px;
+        border-radius: 5px;
         cursor: pointer;
     }
     
-    .contact-container button:hover {
+    .form-submit:hover {
         background-color: #0056b3;
     }
+    

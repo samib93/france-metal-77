@@ -15,7 +15,7 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">A propos</a></li>   
                     <li><a href="#">Nos services</a></li>
                     <li><a href="#">Nos réalisations</a></li>
                     <li><a href="#"><button class="bouton-contact">Contact</button></a></li>
@@ -24,20 +24,20 @@
         </div>
     </div>
 
-    <div class="contact-container">
-        <h2>Contactez-nous</h2>
-        <form action="send_email.php" method="post">
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
-    
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-    
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" required></textarea>
-    
-            <button type="submit">Envoyer</button>
-        </form>
-    </div>
+    <h2>Contactez-nous</h2>
+    <form action="send_email.php" method="post">
+        <label for="email">Votre adresse email :</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="subject">Sujet :</label><br>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <label for="message">Message :</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Envoyer">
+    </form>
+    <
+
 </body>
 </html>
