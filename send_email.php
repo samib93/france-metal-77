@@ -1,23 +1,33 @@
 <?php
+// Vérification si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupération des données du formulaire
-    $email = $_POST["email"];
-    $subject = $_POST["subject"];
-    $message = $_POST["message"];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    
+    // Destinataire de l'e-mail
+    $to = "s.barkaoui@outlook.fr";
+    
+    // Sujet de l'e-mail
+    $subject = "Nouveau message de $name";
 
-    // Adresse email de destination
-    $to = "s_barkaoui@outlook.fr";
+    // Construction du corps de l'e-mail
+    $body = "Nom: $name\n";
+    $body .= "Email: $email\n";
+    $body .= "Message:\n$message";
 
-    // Entête du mail
-    $headers = "From: $email \r\n";
-    $headers .= "Reply-To: $email \r\n";
-    $headers .= "Content-type: text/html; charset=UTF-8 \r\n";
+    // En-têtes de l'e-mail
+    $headers = "From: $email";
 
-    // Envoi de l'email
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Votre message a bien été envoyé.";
+    // Envoi de l'e-mail
+    if (mail($to, $subject, $body, $headers)) {
+        // Redirection après l'envoi du formulaire
+        header('Location: index.html');
+        exit;
     } else {
-        echo "Erreur lors de l'envoi du message. Veuillez réessayer.";
+        // En cas d'échec de l'envoi
+        echo "Une erreur s'est produite. Veuillez réessayer.";
     }
 }
 ?>

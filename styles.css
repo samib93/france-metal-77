@@ -424,7 +424,7 @@ table td {
     }
     
     h2 {
-        color: #333;
+        color: #070707;
     }
     
     .form-content {
@@ -464,6 +464,38 @@ table td {
     }
     
     .form-submit:hover {
+        background-color: #0056b3;
+    }
+
+    .custom-container {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 500px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    input[type="text"],
+    .email-input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
         background-color: #0056b3;
     }
     
