@@ -1,36 +1,41 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const carouselInner = document.querySelector('.carousel-inner');
-    const images = carouselInner.querySelectorAll('img');
-    const totalImages = images.length;
-    const imageWidth = images[0].offsetWidth; 
-    const visibleImages = 3; 
-    let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", function() {
+    const carousel = document.querySelector(".carousel");
+    const carouselInner = carousel.querySelector(".carousel-inner");
+    const prevBtn = carousel.querySelector(".prev-btn");
+    const nextBtn = carousel.querySelector(".next-btn");
 
-    
-    for (let i = 0; i < visibleImages; i++) {
-        const clone = images[i].cloneNode(true);
-        carouselInner.appendChild(clone);
+    let currentIndex = 0;
+    const slides = carouselInner.querySelectorAll("img");
+    const totalSlides = slides.length;
+
+    // Fonction pour déplacer le carousel à l'image suivante
+    function nextSlide() {
+        if (currentIndex < totalSlides - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
     }
 
-   
-    const intervalTime = 5000; 
-
-    setInterval(function() {
-        currentIndex++;
-
-        
-        carouselInner.style.transition = 'transform 1s ease'; 
-        carouselInner.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-
-       
-        if (currentIndex >= totalImages) {
-            setTimeout(() => {
-                currentIndex = 0; 
-                carouselInner.style.transition = 'none'; 
-                carouselInner.style.transform = `translateX(0)`;
-            }, 1000); 
+    // Fonction pour déplacer le carousel à l'image précédente
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
         }
-    }, intervalTime);
+    }
+
+    // Met à jour la position du carousel en fonction de l'index actuel
+    function updateCarousel() {
+        const slideWidth = slides[currentIndex].offsetWidth;
+        carouselInner.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    }
+
+    // Écouteurs d'événements pour les boutons de navigation
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
+
+    // Supprimer l'animation automatique du carousel
+    carouselInner.style.animation = "none";
 });
 
 function animateCounters() {
