@@ -80,13 +80,13 @@ body {
 
 .bouton-contact:hover {
    
-    background-color: #177bd3;
+    background-color: #2b8ce0;
     color: #fff;
 }
 
 
 .encadre-bleu {
-    background-color: #3b7acc;
+    background-color: #0664a3e1;
     padding: 20px;
     margin-top: 100px;
      
@@ -130,7 +130,8 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.bouton-decouvrir:hover {
+.bouton-decouvrir:hover 
+{
     color: #000; 
     background-color: #ffffff;
 }
@@ -140,6 +141,8 @@ h2
 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
+    color: #ffffff;
+   
 }
 
 .chapitre
@@ -148,6 +151,7 @@ h2
     margin-bottom: 40px;
     margin-top: 40px;
     font-size: 35px;
+    color: #000000;
 }
 
 .thick-line-1 {
@@ -319,10 +323,10 @@ table td {
     }
 
     .footer img{
-        width: 400px;
+        width: 380px;
         height: 300px;
         margin-left: 750px;
-        margin-top: 200px;
+        margin-top: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -337,7 +341,7 @@ table td {
         margin-bottom :0.2em;        
         font-size: 20px;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
 
@@ -423,9 +427,7 @@ table td {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     
-    h2 {
-        color: #070707;
-    }
+   
     
     .form-content {
         margin-top: 200px;

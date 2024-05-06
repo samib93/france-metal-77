@@ -27,7 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     } else {
         // En cas d'échec de l'envoi
-        echo "Une erreur s'est produite. Veuillez réessayer.";
+        http_response_code(500);
+        echo "Une erreur s'est produite lors de l'envoi du formulaire. Veuillez réessayer.";
     }
+} else {
+    // En cas d'accès direct au script sans soumission du formulaire
+    http_response_code(403);
+    echo "Accès interdit.";
 }
 ?>
