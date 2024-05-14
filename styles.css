@@ -19,7 +19,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #ffffff;
+    background-color: #ebebeb;
 }
 
 #logo img {
@@ -176,6 +176,7 @@ h2
     background-image: url('images/marbre.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 
 table {
@@ -309,7 +310,9 @@ table td {
         height: auto;
         width: 500px;
         height: 500px;
-        object-fit: cover; 
+        object-fit: cover;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        
     }
     
     .rejoindre{
@@ -518,5 +521,16 @@ table td {
     
     input[type="submit"]:hover {
         background-color: #0056b3;
+    }
+    
+    #progress-bar {
+        height: 15px;
+        background-color: #2a6ba0; /* Couleur de votre barre de progression */
+        position: fixed;
+        top: 80px; /* Ajustez la valeur en fonction de la hauteur à laquelle vous voulez positionner le HR */
+        left: 0;
+        width: 0;
+        z-index: 9998; /* Assurez-vous que la barre de progression est en dessous de la barre de navigation */
+        transition: width 0.2s ease;
     }
     

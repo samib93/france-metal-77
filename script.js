@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Fonction pour déplacer le carousel à l'image suivante
     function nextSlide() {
-        if (currentIndex < totalSlides - 1) {
+        if (currentIndex < totalSlides - 4) { // 4 étant le nombre d'images à afficher
             currentIndex++;
             updateCarousel();
         }
@@ -28,6 +28,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateCarousel() {
         const slideWidth = slides[currentIndex].offsetWidth;
         carouselInner.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+
+        // Gestion de l'état des boutons de navigation
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === totalSlides - 5; // 4 étant le nombre d'images à afficher
     }
 
     // Écouteurs d'événements pour les boutons de navigation
@@ -62,3 +66,14 @@ function animateCounters() {
 }
 
 document.addEventListener('DOMContentLoaded', animateCounters);
+
+
+window.addEventListener('scroll', function() {
+    // Calculer la progression de la page
+    let scrollTop = document.documentElement.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let progress = (scrollTop / scrollHeight) * 100;
+    
+    // Mettre à jour la largeur du HR en fonction de la progression de la page
+    document.getElementById('progress-bar').style.width = progress + '%';
+});
