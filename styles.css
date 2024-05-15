@@ -19,7 +19,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #ebebeb;
+    background-color: transparent; /* Couleur de fond transparente */
+    transition: background-color 0.3s ease; /* Transition en douceur */
 }
 
 #logo img {
@@ -56,15 +57,20 @@ body {
 .navbar a {
     color: #000000; 
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 3px 10px;
     transition: color 0.3s ease; 
 }
 
 .navbar a:hover {
     color:#2a15e785;
     text-decoration: underline; 
-    
+}
 
+
+#header.scrolled .container {
+    background-color: #32a9ee; /* Nouvelle couleur de fond */
+    border-bottom: 1px solid #ffffff; /* Ajouter une bordure en bas si nécessaire */
+    padding: 2px 5px; /* Ajustez le rembourrage si nécessaire */
 }
 
 .bouton-contact {
@@ -80,7 +86,7 @@ body {
 
 .bouton-contact:hover {
    
-    background-color: #2b8ce0;
+    background-color: #153e63;
     color: #fff;
 }
 
@@ -189,6 +195,7 @@ table td {
     vertical-align: top;
     padding: 10px;
 }
+
 
 .image-propos img {
     max-width: 100%;
@@ -321,6 +328,13 @@ table td {
         margin-bottom: 20px;
         margin-top: 20px;
 
+    }
+    .rejoindre-image img
+    {
+        width: 700px;
+        height: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
     }
     
     .content-bouton-contact {
@@ -533,4 +547,30 @@ table td {
         z-index: 9998; /* Assurez-vous que la barre de progression est en dessous de la barre de navigation */
         transition: width 0.2s ease;
     }
+
+    .menu-toggle {
+        display: none; /* Masquer le bouton de menu par défaut */
+    }
+    
+    /* Styles pour le menu lorsqu'il est ouvert */
+    .navbar ul.active {
+        display: flex;
+        flex-direction: column;
+        background-color: #f9f9f9;
+        position: absolute;
+        top: 60px; /* Ajustez la position en fonction de votre barre de navigation */
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 999;
+    }
+    
+    .navbar ul.active li {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    
+
     

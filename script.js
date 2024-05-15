@@ -77,3 +77,19 @@ window.addEventListener('scroll', function() {
     // Mettre à jour la largeur du HR en fonction de la progression de la page
     document.getElementById('progress-bar').style.width = progress + '%';
 });
+
+
+const header = document.getElementById('header');
+
+// Ajoutez un écouteur d'événements de défilement à la fenêtre
+window.addEventListener('scroll', function() {
+    // Vérifiez si la position de défilement est supérieure à 0
+    if (window.scrollY > 0) {
+        // Ajoutez une classe pour changer la couleur et la largeur de la nav
+        header.classList.add('scrolled');
+    } else {
+        // Supprimez la classe si la position de défilement est en haut de la page
+        header.classList.remove('scrolled');
+    }
+});
+
