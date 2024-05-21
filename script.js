@@ -93,3 +93,13 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+document.getElementById('navbar-toggle').addEventListener('click', function() {
+    var navbar = document.getElementById('navbar').getElementsByTagName('ul')[0];
+    if (navbar.classList.contains('active')) {
+        navbar.classList.remove('active');
+    } else {
+        navbar.classList.add('active');
+    }
+});
+
