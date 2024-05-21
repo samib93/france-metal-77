@@ -93,13 +93,11 @@ window.addEventListener('scroll', function() {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    var navbarToggle = document.getElementById("navbar-toggle");
+    var navbarMenu = document.querySelector(".navbar ul");
 
-document.getElementById('navbar-toggle').addEventListener('click', function() {
-    var navbar = document.getElementById('navbar').getElementsByTagName('ul')[0];
-    if (navbar.classList.contains('active')) {
-        navbar.classList.remove('active');
-    } else {
-        navbar.classList.add('active');
-    }
+    navbarToggle.addEventListener("click", function() {
+        navbarMenu.classList.toggle("active");
+    });
 });
-

@@ -548,29 +548,70 @@ table td {
         transition: width 0.2s ease;
     }
 
-    .menu-toggle {
-        display: none; /* Masquer le bouton de menu par défaut */
+    .navbar-toggle {
+        display: none;
+        font-size: 50px;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
     
-    /* Styles pour le menu lorsqu'il est ouvert */
-    .navbar ul.active {
-        display: flex;
-        flex-direction: column;
-        background-color: #f9f9f9;
-        position: absolute;
-        top: 60px; /* Ajustez la position en fonction de votre barre de navigation */
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-        z-index: 999;
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: flex-start; /* Aligner le contenu à gauche */
+        }
+        #logo {
+            width: 200px; /* Augmenter la taille du logo */
+            height: auto;
+            margin: 20px 0 0 20px; /* Ajuster la marge pour placer le logo en haut à gauche */
+        }
+        .navbar ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            padding-left: 0;
+            background-color: rgb(50, 113, 230); /* Fond bleu */
+        }
+        .navbar ul.active {
+            display: flex;
+        }
+        .navbar li {
+            display: block;
+            margin: 10px 0;
+        }
+        .navbar-toggle {
+            display: block;
+            margin-left: 400px; /* Déplacer légèrement vers la gauche */
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .navbar a {
+            display: block;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            color: rgb(2, 2, 2);
+        }
+        .bouton-contact {
+            width: calc(100% - 40px); /* Réduire légèrement la largeur pour compenser le déplacement du bouton */
+            margin: 10px 20px; /* Ajuster les marges */
+        }
+        .encadre-bleu {
+            background-color: #0664a3e1;
+            padding: 65px;
+            margin-top: 100px;
+            width: 100%;
+             
+        }
+        
+        .contenu {
+            display: flex;
+        }
     }
-    
-    .navbar ul.active li {
-        display: block;
-        text-align: center;
-        margin: 5px 0;
-    }
-    
     
 
     
