@@ -8,9 +8,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const slides = carouselInner.querySelectorAll("img");
     const totalSlides = slides.length;
 
+    // Fonction pour obtenir le nombre d'images visibles en fonction de la largeur de l'écran
+    function getVisibleSlides() {
+        if (window.innerWidth <= 768) {
+            return 2; // 2 images visibles pour les petits écrans
+        }
+        return 4; // 4 images visibles pour les écrans plus grands
+    }
+
     // Fonction pour déplacer le carousel à l'image suivante
     function nextSlide() {
-        if (currentIndex < totalSlides - 4) { // 4 étant le nombre d'images à afficher
+        const visibleSlides = getVisibleSlides();
+        if (currentIndex < totalSlides - visibleSlides) {
             currentIndex++;
             updateCarousel();
         }
@@ -26,17 +35,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Met à jour la position du carousel en fonction de l'index actuel
     function updateCarousel() {
-        const slideWidth = slides[currentIndex].offsetWidth;
-        carouselInner.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+        const visibleSlides = getVisibleSlides();
+        const slideWidth = slides[0].offsetWidth;
+        const margin = 10; // Ajuster cette valeur selon la marge entre les images
+        carouselInner.style.transform = `translateX(-${(slideWidth + margin) * currentIndex}px)`;
 
         // Gestion de l'état des boutons de navigation
         prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex === totalSlides - 5; // 4 étant le nombre d'images à afficher
+        nextBtn.disabled = currentIndex === totalSlides - visibleSlides;
     }
 
     // Écouteurs d'événements pour les boutons de navigation
     nextBtn.addEventListener("click", nextSlide);
     prevBtn.addEventListener("click", prevSlide);
+
+    // Mettre à jour le carrousel initialement
+    updateCarousel();
+
+    // Mettre à jour le carrousel lors du redimensionnement de la fenêtre
+    window.addEventListener("resize", updateCarousel);
 
     // Supprimer l'animation automatique du carousel
     carouselInner.style.animation = "none";

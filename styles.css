@@ -603,15 +603,110 @@ table td {
         .encadre-bleu {
             background-color: #0664a3e1;
             padding: 65px;
-            margin-top: 100px;
-            width: 100%;
+            margin-top: 150px;
+            width: 80%;
              
         }
         
         .contenu {
             display: flex;
         }
-    }
+
+        .titre {
+            color: #fff;
+            margin: 0;
+            margin-left: 2px;
+            font-size: 110%;
+            white-space: nowrap;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .image-propos{
+            display: none;
+        }
+
+        .carousel {
+            width: 700px; /* Ajustez la largeur selon vos besoins pour deux images */
+            padding: 0 30px;
+            box-sizing: border-box;
+            margin-left: 5px;
+        }
+    
+        .carousel-inner img {
+            width: calc(50% - 10px); /* La largeur de chaque image sera 50% de la largeur du carousel */
+            margin-right: 0;
+        } 
+    
+        .prev-btn,
+        .next-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond des boutons */
+        border: none;
+        color: black;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1; /* Assurez-vous que les boutons sont au-dessus des images */
+         }
+    
+     .prev-btn {
+        left: 0;
+        padding: 10px 20px;
+         }
+    
+    .next-btn {
+        right: 0;
+        padding: 10px 20px;
+        }
+
+        .fond {
+            background-color: #014fa1;
+            height: 900px; /* Augmentez la hauteur selon vos besoins */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Pour centrer le contenu verticalement */
+        }
+    
+        /* Alignement du contenu */
+        .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Pour centrer le contenu verticalement */
+            text-align: center; /* Pour centrer le texte */
+        }
+    
+        .title, .content {
+            width: 100%; /* Ajustement de la largeur */
+            margin-bottom: 20px;
+        }
+    
+        .title h4 {
+            font-size: 25px;
+            margin-top: 0;
+        }
+    
+        .content p {
+            margin: 0;
+            font-size: 14px;
+        }
+    
+        .counter {
+            font-size: 30px;
+        }
+    
+        .icone {
+            margin-bottom: 10px;
+        }
+    
+        .icone img {
+            width: 85px; /* Ajustez la taille des icônes selon vos besoins */
+            height: auto; /* Conserver les proportions */
+        }
+
+}
+        
     
 
     
