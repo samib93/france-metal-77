@@ -257,106 +257,108 @@ table td {
     padding: 10px 20px;
 }
 
-    .fond {
-        background-color: #014fa1; 
-        color: #ffffff; 
-        padding : 20px; 
-        display: flex; 
-        flex-direction: column; 
-        align-items: center;
-        height: 450px;    
-    }
+.fond {
+    background-color: #014fa1; 
+    color: #ffffff; 
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
 
-    .row {
-        display: flex; 
-        justify-content: space-between; 
-        width: 100%; 
-        margin-bottom: 10px; 
-    }
+.row {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    margin-bottom: 10px; 
+}
 
-    .title, .content {
-        width: 30%; 
-    }
+.column {
+    width: 30%; 
+}
 
-    .title h4 {
-        margin: 0; 
-        font-size: 35px; 
-        font-weight: bold; 
-        text-align: center;
-    }
+.title h4 {
+    margin: 0; 
+    font-size: 35px; 
+    font-weight: bold; 
+    text-align: center;
+}
 
-    .content p {
-        margin: 0; 
-        font-size: 16px; 
-        text-align: center; 
-        line-height: 1.5; 
-        width: 350px;
-        margin-left: 100px ;
+.content p {
+    margin: 0; 
+    font-size: 16px; 
+    text-align: center; 
+    line-height: 1.5; 
+    width: 350px;
+    margin-left: 100px;
+}
 
-    }
-    
-    .icone img
-    {   width: 100px;
-        height: auto;
-        margin-left: 230px;
+.icone img {
+    width: 100px;
+    height: auto;
+    margin-left: 230px;
+}
 
-    }
+.counter {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 60px;
+}
 
-    .counter {
-        color: #ffffff;
-        font-weight: bold;
-        font-size: 60px;
-    }
+.rejoindre {
+    background-image: url('images/blue.avif');
+    background-size: cover;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
 
-    .texte {
-        padding: 20px;
-        text-align: justify;
-    }
-    .image-propos img {
-        max-width: 100%;
-        height: auto;
-        width: 500px;
-        height: 500px;
-        object-fit: cover;
-        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-        
-    }
-    
-    .rejoindre{
-        background-image: url('images/blue.avif');
-        background-size: cover;
-        margin-bottom: 20px;
-        margin-top: 20px;
+.rejoindre-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 
-    }
-    .rejoindre-image img
-    {
-        width: 700px;
-        height: auto;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        border-radius: 15px;
-    }
-    
-    .content-bouton-contact {
-        background-color: #448ae6;
-        color: #fff;
-        border: none;
-        border-radius: 15px;
-        padding: 10px 20px;
-        font-size: 25px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-    
-    .content-bouton-contact:hover {
-        color: #000; 
-        background-color: #c5c1c1;
-    }
+.rejoindre-image {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
 
+.rejoindre-image img {
+    max-width: 70%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
 
-    .sous-titre{
-        font-size: 40px;
-    }
+.texte {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+}
+
+.sous-titre {
+    font-size: 40px;
+}
+
+.content-bouton-contact {
+    background-color: #448ae6;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.content-bouton-contact:hover {
+    color: #000; 
+    background-color: #c5c1c1;
+}
 
     .footer img{
         width: 380px;
@@ -560,35 +562,49 @@ table td {
         .container {
             flex-direction: column;
             align-items: flex-start; /* Aligner le contenu à gauche */
+            width: 100%; /* Utiliser toute la largeur disponible */
+            margin: 0; /* Réinitialiser les marges */
+            padding: 0 10px; /* Ajouter un léger padding aux côtés */
         }
+    
         #logo {
-            width: 200px; /* Augmenter la taille du logo */
+            width: 100%; /* Ajuster la largeur du logo pour qu'il remplisse le conteneur */
             height: auto;
-            margin: 20px 0 0 20px; /* Ajuster la marge pour placer le logo en haut à gauche */
+            margin: 20px 0; /* Ajouter une marge en haut et en bas */
         }
+    
+        .navbar {
+            width: 100%; /* Ajuster la largeur de la barre de navigation */
+            overflow-x: hidden; /* Masquer tout débordement horizontal */
+        }
+    
         .navbar ul {
+            width: 100%; /* Ajuster la largeur de la liste à l'intérieur de la barre de navigation */
             display: none;
             flex-direction: column;
-            width: 100%;
             text-align: center;
             padding-left: 0;
             background-color: rgb(50, 113, 230); /* Fond bleu */
         }
+    
         .navbar ul.active {
             display: flex;
         }
+    
         .navbar li {
             display: block;
             margin: 10px 0;
         }
+    
         .navbar-toggle {
             display: block;
-            margin-left: 400px; /* Déplacer légèrement vers la gauche */
+            margin: 0 auto; /* Centrer le bouton de la barre de navigation */
             font-size: 24px;
             background: none;
             border: none;
             cursor: pointer;
         }
+    
         .navbar a {
             display: block;
             padding: 10px;
@@ -596,10 +612,12 @@ table td {
             text-align: center;
             color: rgb(2, 2, 2);
         }
+    
         .bouton-contact {
             width: calc(100% - 40px); /* Réduire légèrement la largeur pour compenser le déplacement du bouton */
-            margin: 10px 20px; /* Ajuster les marges */
+            margin: 10px auto; /* Centrer horizontalement */
         }
+        
         .encadre-bleu {
             background-color: #0664a3e1;
             padding: 65px;
@@ -659,54 +677,59 @@ table td {
         padding: 10px 20px;
         }
 
-        .fond {
-            background-color: #014fa1;
-            height: 900px; /* Augmentez la hauteur selon vos besoins */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; /* Pour centrer le contenu verticalement */
-        }
-    
-        /* Alignement du contenu */
+
         .row {
-            display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Pour centrer le contenu verticalement */
-            text-align: center; /* Pour centrer le texte */
         }
     
-        .title, .content {
-            width: 100%; /* Ajustement de la largeur */
+        .column {
+            width: 100%;
             margin-bottom: 20px;
         }
     
         .title h4 {
-            font-size: 25px;
-            margin-top: 0;
-        }
-    
-        .content p {
-            margin: 0;
-            font-size: 14px;
-        }
-    
-        .counter {
-            font-size: 30px;
-        }
-    
-        .icone {
-            margin-bottom: 10px;
+            font-size: 24px;
         }
     
         .icone img {
-            width: 85px; /* Ajustez la taille des icônes selon vos besoins */
-            height: auto; /* Conserver les proportions */
+            width: 90px;
+            margin-left:45%;
+        }
+    
+        .content p {
+            width: auto;
+            margin: 10px 0;
+        }
+    
+        .counter {
+            font-size: 40px;
         }
 
+
+        .rejoindre-row {
+            flex-direction: column;
+        }
+    
+        .sous-titre {
+            font-size: 28px;
+            color: #000;
+        }
+    
+        .content-bouton-contact {
+            font-size: 18px;
+            padding: 6px 12px;
+        }
+    
+        .texte {
+            text-align: center;
+        }
+
+
+        .footer img{
+            margin: center;
+        }
 }
         
-    
 
     
