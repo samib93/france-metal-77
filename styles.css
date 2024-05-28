@@ -559,18 +559,21 @@ table td {
     }
     
     @media (max-width: 768px) {
+        #header {
+            width: 75%;
+            overflow-x: hidden; /* Masquer tout débordement horizontal */
+        }
+    
         .container {
             flex-direction: column;
             align-items: flex-start; /* Aligner le contenu à gauche */
-            width: 100%; /* Utiliser toute la largeur disponible */
-            margin: 0; /* Réinitialiser les marges */
-            padding: 0 10px; /* Ajouter un léger padding aux côtés */
+            width: 100%;
         }
     
         #logo {
-            width: 100%; /* Ajuster la largeur du logo pour qu'il remplisse le conteneur */
+            width: 150px; /* Ajuster la taille du logo */
             height: auto;
-            margin: 20px 0; /* Ajouter une marge en haut et en bas */
+            margin: 20px 0 0 20px; /* Ajuster la marge pour placer le logo en haut à gauche */
         }
     
         .navbar {
@@ -585,6 +588,7 @@ table td {
             text-align: center;
             padding-left: 0;
             background-color: rgb(50, 113, 230); /* Fond bleu */
+            margin: 0; /* Supprimer les marges */
         }
     
         .navbar ul.active {
@@ -598,8 +602,9 @@ table td {
     
         .navbar-toggle {
             display: block;
-            margin: 0 auto; /* Centrer le bouton de la barre de navigation */
-            font-size: 24px;
+            margin-left: auto; /* Centrer le bouton de toggle à droite */
+            margin-right: 380px; /* Ajuster la marge pour le placer correctement */
+            font-size: 35px;
             background: none;
             border: none;
             cursor: pointer;
@@ -726,8 +731,10 @@ table td {
         }
 
 
-        .footer img{
-            margin: center;
+        .image-bas img {
+            margin-left: 200px;
+            position: relative;
+            top: 230px; /* Ajustez cette valeur selon vos besoins */
         }
 }
         
