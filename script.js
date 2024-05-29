@@ -118,3 +118,34 @@ document.addEventListener("DOMContentLoaded", function() {
         navbarMenu.classList.toggle("active");
     });
 });
+
+document.querySelector('.custom-container form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêcher le rechargement de la page
+
+    // Récupération des valeurs du formulaire
+    const name = document.getElementById('name').value;
+    const prenom = document.getElementById('prenom').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Configuration de l'envoi d'e-mail avec Email.js
+    emailjs.send("service_bvq5oz9", "template_avfkarf", {
+        from_name: name,
+        from_prenom: prenom,
+        from_phone: phone,
+        from_email: email,
+        message: message
+    }, "rnieE8Gf2U3HWE9Oj")
+    .then(function(response) {
+        console.log("E-mail envoyé avec succès !", response);
+        alert("Votre message a été envoyé avec succès.");
+        // Réinitialisation du formulaire
+        document.querySelector('.custom-container form').reset();
+    }, function(error) {
+        console.error("Erreur lors de l'envoi de l'e-mail :", error);
+        alert("Une erreur est survenue lors de l'envoi de votre message.");
+    });
+});
+
+

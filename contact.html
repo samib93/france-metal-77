@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css-pages/styles-contact.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("rnieE8Gf2U3HWE9Oj"); // Remplacez "YOUR_USER_ID" par votre vrai User ID
+        })();
+    </script>
+    
     <title>Contact</title>
+
 </head>
 <body>
     <div id="header">
@@ -24,21 +33,46 @@
         </div>
     </div>
 
+        <div class ="Contact">
+            <hr class="thick-line-1">
+            <h2 class="chapitre">NOUS CONTACTER</h2>
+            <hr class="thick-line">
+
     <div class="custom-container">
-        <h2>Contactez-nous</h2>
-        <form action="send_mail.php" method="post">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">E-mail :</label>
-            <input type="email" id="email" name="email" class="email-input" required>
-
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <input type="submit" value="Envoyer">
+        <form action="" method="post" id="contact-form">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Numéro de téléphone :</label>
+                <input type="tel" id="phone" name="phone" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail :</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" class="form-textarea" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Envoyer" class="form-submit">
+            </div>
         </form>
     </div>
+    
+
+    
+
+    <script src="script.js"></script>
+    
+      
+      
 
 </body>
 </html>
