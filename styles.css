@@ -464,19 +464,34 @@ table td {
         padding: 0;
     }
     
+    .outer-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 40px auto;
+    }
+    
     .custom-container {
-        max-width: 600px;
-        margin: 50px auto;
-        padding: 20px;
+        width: 500px; /* Taille initiale du cadre blanc */
+        padding: 40px;
         background-color: #fffefe;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-right: 40%;
     }
     
-    .custom-container h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #007bff;
+    .image-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 40%; /* Ajustez cette valeur pour que l'image ne sorte pas de l'écran */
+    }
+    
+    .form-image {
+        width: 600px; /* Taille de l'image environ égale à celle du cadre blanc */
+        height: auto; /* Pour conserver le ratio d'aspect */
+        border-radius: 8px; /* Optionnel : pour arrondir les coins de l'image */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
     
     .form-group {
@@ -527,7 +542,7 @@ table td {
         box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     }
     
-    .contact{
+    .contact {
         margin-top: 130px;
     }
     
@@ -741,6 +756,16 @@ table td {
             position: relative;
             top: 230px; /* Ajustez cette valeur selon vos besoins */
         }
+
+        .custom-container {
+            width: 80%;
+            margin-right: 0;
+            padding: 20px;
+        }
+        
+        .image-container {
+            display: none;
+        }
     }
 
 
@@ -935,6 +960,15 @@ table td {
             position: relative;
             top: 200px; /* Ajustez cette valeur selon vos besoins */
         }
+        .custom-container {
+            width: 80%;
+            margin-right: 0;
+            padding: 20px;
+        }
+        
+        .image-container {
+            display: none;
+        }
     }
 
    
@@ -1128,6 +1162,15 @@ table td {
         position: relative;
         top: 230px; /* Ajustez cette valeur selon vos besoins */
     }
+    .custom-container {
+        width: 80%;
+        margin-right: 0;
+        padding: 20px;
+    }
+    
+    .image-container {
+        display: none;
+    }
 }
 
 
@@ -1319,6 +1362,13 @@ table td {
         margin-left: 200px;
         position: relative;
         top: 230px; /* Ajustez cette valeur selon vos besoins */
+    }
+    .custom-container {
+        margin-right: 20%;
+    }
+    
+    .image-container {
+        margin-left: 20%;
     }
 }
 
