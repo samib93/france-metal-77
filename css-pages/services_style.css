@@ -1,0 +1,66 @@
+.portfolio-section-photos {
+    background-color: white;
+  }
+  
+  .portfolio-section-photos h2 {
+    color: #242424;
+    margin-bottom: 80px;
+  }
+
+ .photo-titre{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    background-color: rgb(25, 128, 224);
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 250px;
+    margin-left: 150px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    
+ }
+  
+  .grid-paysages {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 300px 300px 300px;
+    gap: 60px;
+  }
+  
+  .grid-portraits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 15px;
+  }
+  
+  .grid-paysages img,
+  .grid-portraits img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .lien-conteneur-photo {
+    position: relative;
+  }
+  
+  .photo-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+  }
+  
+  .lien-conteneur-photo:hover .photo-hover {
+    display: flex;
+  }
