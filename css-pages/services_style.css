@@ -64,3 +64,28 @@
   .lien-conteneur-photo:hover .photo-hover {
     display: flex;
   }
+
+  .swiper-container {
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Hide it initially */
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.swiper-container img {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+}
