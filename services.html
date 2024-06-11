@@ -13,14 +13,14 @@
         <hr id="progress-bar">
         <div class="container">
             <div id="logo">
-                <img src="images/france_metal-Non_detoure-Photoroom.png-Photoroom.png" alt="Logo">
+                <a href ="index.html"><img src="images/france_metal-Non_detoure-Photoroom.png-Photoroom.png" alt="Logo"></a>
             </div>
             <button class="navbar-toggle" id="navbar-toggle">&#9776;</button>
             <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="services.html">Nos services</a></li>
                     <li><a href="index.html">Nos réalisations</a></li>
+                    <li><a href="services.html">Nos services</a></li>
                     <li><a href="contact.html"><button class="bouton-contact">Contact</button></a></li>
                 </ul>
             </nav>
@@ -30,97 +30,107 @@
     <section class="portfolio-section-photos">
         <h2>Paysages</h2>
         <div class="grid-paysages">
-            <!-- Vos images existantes ici -->
             <div class="photo-conteneur">
                 <div class="photo-titre">Tôlerie</div>
-                <a href="#swiper-container" class="lien-conteneur-photo" data-swiper-images="images/image3,images/grillage_maison.jpg,images/grillage_maison.jpg">
-                    <img src="images/grillage_maison.jpg" alt="Mont Aoraki - Nouvelle-Zélande">
+                <a href="#swiper-container" class="lien-conteneur-photo" data-swiper-images="images/image3.jpg,images/image1.jpg,images/image2.jpg">
+                    <img src="images/grillage_maison.jpg" alt="grillage grillage_maison">
                     <div class="photo-hover">Voir la photo</div>
                 </a>
             </div>
             <div class="photo-conteneur">
                 <div class="photo-titre">Portail</div>
-                <a href="images/portail-formulaire.jpg" class="lien-conteneur-photo">
-                    <img src="images/portail-formulaire.jpg" alt="Parc National d’Abel Tasman - Nouvelle-Zélande">
+                <a href="#swiper-container" class="lien-conteneur-photo" data-swiper-images="images/portail-formulaire.jpg,images/image1.jpg,images/image2.jpg">
+                    <img src="images/portail-formulaire.jpg" alt="portail">
                     <div class="photo-hover">Voir la photo</div>
                 </a>
             </div>
             <div class="photo-conteneur">
                 <div class="photo-titre">Ferronerie</div>
-                <a href="images/img-couvertine-machine.jpg" class="lien-conteneur-photo">
-                    <img src="images/img-couvertine-machine.jpg" alt="Lac Rotorua - Nouvelle-Zélande">
+                <a href="#swiper-container" class="lien-conteneur-photo" data-swiper-images="images/img-couvertine-machine.jpg,images/image1.jpg,images/image2.jpg">
+                    <img src="images/img-couvertine-machine.jpg" alt="couvertines">
                     <div class="photo-hover">Voir la photo</div>
                 </a>
             </div>
             <div class="photo-conteneur">
                 <div class="photo-titre">Garde Corps</div>
-                <a href="images/image3.jpg" class="lien-conteneur-photo">
-                    <img src="images/image3.jpg" alt="Lac Wanaka - Nouvelle-Zélande">
+                <a href="#swiper-container" class="lien-conteneur-photo" data-swiper-images="images/image3.jpg,images/image1.jpg,images/image2.jpg">
+                    <img src="images/image3.jpg" alt="garde poubelle">
                     <div class="photo-hover">Voir la photo</div>
                 </a>
             </div>
             <div class="photo-conteneur">
                 <div class="photo-titre">Métallerie</div>
-                <a href="images/img-amara.jpg" class="lien-conteneur-photo">
-                    <img src="images/img-amara.jpg" alt="Mont Taranaki - Nouvelle-Zélande">
+                <a href="#swiper-container" class="lien-conteneur-photo" data-swiper-images="images/img-amara.jpg,images/image1.jpg,images/image2.jpg">
+                    <img src="images/img-amara.jpg" alt="hhoto atelier">
                     <div class="photo-hover">Voir la photo</div>
                 </a>
             </div>
             <div class="photo-conteneur">
                 <div class="photo-titre">Couvertine</div>
-                <a href="images/Img-couvertine.jpg" class="lien-conteneur-photo">
-                    <img src="images/Img-couvertine.jpg" alt="Milford Sound - Nouvelle-Zélande">
+                <a href="#swiper-container" class="lien-conteneur-photo" data-swiper-images="images/Img-couvertine.jpg,images/image1.jpg,images/image2.jpg">
+                    <img src="images/Img-couvertine.jpg" alt="couvertines">
                     <div class="photo-hover">Voir la photo</div>
                 </a>
             </div>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var swiper;
-        
-                document.querySelectorAll('.lien-conteneur-photo').forEach(function (link) {
-                    link.addEventListener('click', function (event) {
-                        event.preventDefault();
-        
-                        var images = link.getAttribute('data-swiper-images').split(',');
-        
-                        var swiperWrapper = document.querySelector('#swiper-container .swiper-wrapper');
-                        swiperWrapper.innerHTML = '';
-        
-                        images.forEach(function (image) {
-                            var slide = document.createElement('div');
-                            slide.className = 'swiper-slide';
-                            slide.innerHTML = '<img src="' + image + '">';
-                            swiperWrapper.appendChild(slide);
-                        });
-        
-                        document.getElementById('swiper-container').style.display = 'block';
-        
-                        if (swiper) {
-                            swiper.update();
-                        } else {
-                            swiper = new Swiper('#swiper-container', {
-                                pagination: {
-                                    el: '.swiper-pagination',
-                                    clickable: true,
-                                },
-                                navigation: {
-                                    nextEl: '.swiper-button-next',
-                                    prevEl: '.swiper-button-prev',
-                                },
-                            });
-                        }
+    </section>
+
+    <!-- Swiper Container -->
+    <div id="swiper-container" class="swiper-container">
+        <div class="swiper-wrapper"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper;
+
+            document.querySelectorAll('.lien-conteneur-photo').forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    var images = link.getAttribute('data-swiper-images').split(',');
+
+                    var swiperWrapper = document.querySelector('#swiper-container .swiper-wrapper');
+                    swiperWrapper.innerHTML = '';
+
+                    images.forEach(function (image) {
+                        var slide = document.createElement('div');
+                        slide.className = 'swiper-slide';
+                        slide.innerHTML = '<img src="' + image + '">';
+                        swiperWrapper.appendChild(slide);
                     });
-                });
-        
-                document.getElementById('swiper-container').addEventListener('click', function (event) {
-                    if (event.target.classList.contains('swiper-container')) {
-                        this.style.display = 'none';
+
+                    document.getElementById('swiper-container').style.display = 'block';
+
+                    if (swiper) {
+                        swiper.update();
+                    } else {
+                        swiper = new Swiper('#swiper-container', {
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                        });
                     }
                 });
             });
-        </script>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>        
+            document.getElementById('swiper-container').addEventListener('click', function (event) {
+                if (event.target.id === 'swiper-container') {
+                    this.style.display = 'none';
+                }
+            });
+        });
+    </script>        
 </body>
 </html>

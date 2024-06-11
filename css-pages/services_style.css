@@ -1,91 +1,97 @@
 .portfolio-section-photos {
-    background-color: white;
-  }
-  
-  .portfolio-section-photos h2 {
-    color: #242424;
-    margin-bottom: 80px;
-  }
-
- .photo-titre{
-    text-align: center;
-    font-size: 30px;
-    color: black;
-    background-color: rgb(25, 128, 224);
-    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    width: 250px;
-    margin-left: 160px;
-    padding: 2px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    
- }
-  
-  .grid-paysages {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-template-rows: 300px 300px 300px;
-    gap: 80px;
-  }
-  
-  .grid-portraits {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px 300px;
-    gap: 15px;
-  }
-  
-  .grid-paysages img,
-  .grid-portraits img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .lien-conteneur-photo {
-    position: relative;
-  }
-  
-  .photo-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-  }
-  
-  .lien-conteneur-photo:hover .photo-hover {
-    display: flex;
-  }
-
-  .swiper-container {
-    width: 80%;
-    height: 80%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none; /* Hide it initially */
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: white;
 }
 
-.swiper-container img {
-    width: 100%;
-    height: auto;
+.portfolio-section-photos h2 {
+  color: #242424;
+  margin-bottom: 80px;
+}
+
+.photo-titre {
+  text-align: center;
+  font-size: 30px;
+  color: black;
+  background-color: rgb(25, 128, 224);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: semibold;
+  width: 170px;
+  margin-left: 210px;
+  padding: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.grid-paysages {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 300px 300px 300px;
+  gap: 80px;
+}
+
+.grid-portraits {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 15px;
+}
+
+.grid-paysages img,
+.grid-portraits img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lien-conteneur-photo {
+  position: relative;
+}
+
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.lien-conteneur-photo:hover .photo-hover {
+  display: flex;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #fff;
+  color: white;
 }
+
+.swiper-pagination-bullet {
+  background: white;
+} 
