@@ -566,207 +566,181 @@ table td {
         cursor: pointer;
     }
     
-    @media (max-width: 768px) {
-        body, html {
-            overflow-x: hidden; /* Masquer le débordement horizontal global */
-        }
-    
-        #header {
-            width: 100%; /* Assurez-vous que le header utilise toute la largeur de l'écran */
-            overflow-x: hidden; /* Masquer tout débordement horizontal */
-        }
-    
-        .container {
-            flex-direction: column;
-            align-items: flex-start; /* Aligner le contenu à gauche */
-            width: 100%;
-            padding: 0 10px; /* Ajouter du padding pour éviter les débordements */
-            box-sizing: border-box; /* Inclure le padding dans la largeur totale */
-        }
-    
-        #logo {
-            width: 150px; /* Ajuster la taille du logo */
-            height: auto;
-            margin: 20px 0 0 20px; /* Ajuster la marge pour placer le logo en haut à gauche */
-        }
-    
-        #progress-bar {
-            display: none; /* Masquer la barre de progression */
-        }
-    
-        .navbar {
-            width: 100%; /* Ajuster la largeur de la barre de navigation */
-            overflow-x: hidden; /* Masquer tout débordement horizontal */
-        }
-    
-        .navbar ul {
-            width: 100%; /* Ajuster la largeur de la liste à l'intérieur de la barre de navigation */
-            display: none;
-            flex-direction: column;
-            text-align: center;
-            padding-left: 0;
-            background-color: rgb(50, 113, 230); /* Fond bleu */
-            margin: 0; /* Supprimer les marges */
-        }
-    
-        .navbar ul.active {
-            display: flex;
-        }
-    
-        .navbar li {
-            display: block;
-            margin: 10px 0;
-        }
-    
-        .navbar-toggle {
-            display: block;
-            margin-left: auto; /* Centrer le bouton de toggle à droite */
-            margin-right: 50%; /* Ajuster la marge pour le placer correctement */
-            font-size: 24px;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-    
-        .navbar a {
-            display: block;
-            padding: 10px;
-            width: 100%;
-            text-align: center;
-            color: rgb(2, 2, 2);
-        }
-    
-        .bouton-contact {
-            width: calc(100% - 40px); /* Réduire légèrement la largeur pour compenser le déplacement du bouton */
-            margin: 10px auto; /* Centrer horizontalement */
-        }
-    
-        .encadre-bleu {
-            background-color: #0664a3e1;
-            padding: 65px;
-            margin-top: 150px;
-            width: 100%;
-        }
-
-        .image-azad{
-            display: none;
-
-        }
-    
-        .contenu {
-            display: flex;
-        }
-    
-        .titre {
-            color: #fff;
-            margin: 0;
-            margin-left: 2px;
-            font-size: 110%;
-            white-space: nowrap;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-    
-        .image-propos {
-            display: none;
-        }
-    
-        .carousel {
-            width: 100%; /* Ajustez la largeur pour qu'elle ne dépasse pas de l'écran */
-            padding: 0 15px; /* Ajouter du padding pour éviter les débordements */
-            box-sizing: border-box; /* Inclure le padding dans la largeur totale */
-            margin-left: 0; /* Supprimer la marge gauche */
-        }
-    
-        .carousel-inner img {
-            width: calc(50% - 10px); /* La largeur de chaque image sera 50% de la largeur du carousel */
-            margin-right: 0;
-        }
-    
-        .prev-btn,
-        .next-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond des boutons */
-            border: none;
-            color: black;
-            font-size: 24px;
-            cursor: pointer;
-            z-index: 1; /* Assurez-vous que les boutons sont au-dessus des images */
-        }
-    
-        .prev-btn {
-            left: 0;
-            padding: 10px 20px;
-        }
-    
-        .next-btn {
-            right: 0;
-            padding: 10px 20px;
-        }
-    
-        .row {
-            flex-direction: column;
-            align-items: center;
-        }
-    
-        .column {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-    
-        .title h4 {
-            font-size: 24px;
-        }
-    
-        .icone img {
-            width: 90px;
-            margin-left: 45%;
-        }
-    
-        .content p {
-            width: auto;
-            margin: 10px 0;
-        }
-    
-        .counter {
-            font-size: 40px;
-        }
-    
-        .rejoindre-row {
-            flex-direction: column;
-        }
-    
-        .sous-titre {
-            font-size: 28px;
-            color: #000;
-        }
-    
-        .content-bouton-contact {
-            font-size: 18px;
-            padding: 6px 12px;
-        }
-    
-        .texte {
-            text-align: center;
-        }
-    
-        .image-bas img {
-            margin-left: 200px;
-            position: relative;
-            top: 230px; /* Ajustez cette valeur selon vos besoins */
-        }
-
-        .custom-container {
-            width: 80%;
-            margin-right: 0;
-            padding: 20px;
-        }
-        
-        .image-container {
-            display: none;
-        }
+   @media (max-width: 768px) {
+    body, html {
+        overflow-x: hidden;
     }
+
+    #header {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    #logo {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .navbar {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar ul {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 0;
+        background-color: rgb(50, 113, 230);
+        margin: 0;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+        margin: 0 auto;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        color: rgb(2, 2, 2);
+    }
+
+    .bouton-contact {
+        width: calc(100% - 40px);
+        margin: 10px auto;
+    }
+
+    .encadre-bleu {
+        background-color: #0664a3e1;
+        padding: 65px;
+        margin-top: 150px;
+        width: 100%;
+    }
+
+    .image-azad, .image-propos {
+        display: none;
+    }
+
+    .contenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titre {
+        color: #fff;
+        margin: 0;
+        font-size: 110%;
+        white-space: nowrap;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .carousel {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin-left: 0;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .prev-btn, .next-btn {
+        position: static;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        color: black;
+        font-size: 24px;
+        cursor: pointer;
+        width: 50%;
+        padding: 10px 20px;
+        margin: 10px auto;
+    }
+
+    .row, .column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .title h4 {
+        font-size: 24px;
+    }
+
+    .icone img {
+        width: 90px;
+        margin: 0 auto;
+    }
+
+    .content p {
+        margin: 10px 0;
+    }
+
+    .counter {
+        font-size: 40px;
+    }
+
+    .rejoindre-row {
+        flex-direction: column;
+    }
+
+    .sous-titre {
+        font-size: 28px;
+        color: #000;
+    }
+
+    .content-bouton-contact {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+
+    .texte {
+        text-align: center;
+    }
+
+    .image-bas img {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .custom-container {
+        width: 80%;
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    .image-container {
+        display: none;
+    }
+}
 
 
     @media (max-width: 480px) {

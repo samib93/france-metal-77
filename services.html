@@ -88,49 +88,92 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var swiper;
+    var swiper;
 
-            document.querySelectorAll('.lien-conteneur-photo').forEach(function (link) {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault();
+    document.querySelectorAll('.lien-conteneur-photo').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
 
-                    var images = link.getAttribute('data-swiper-images').split(',');
+            var images = link.getAttribute('data-swiper-images').split(',');
 
-                    var swiperWrapper = document.querySelector('#swiper-container .swiper-wrapper');
-                    swiperWrapper.innerHTML = '';
+            var swiperWrapper = document.querySelector('#swiper-container .swiper-wrapper');
+            swiperWrapper.innerHTML = '';
 
-                    images.forEach(function (image) {
-                        var slide = document.createElement('div');
-                        slide.className = 'swiper-slide';
-                        slide.innerHTML = '<img src="' + image + '">';
-                        swiperWrapper.appendChild(slide);
-                    });
+            images.forEach(function (image) {
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                var img = document.createElement('img');
+                img.src = image.trim();
+                slide.appendChild(img);
+                swiperWrapper.appendChild(slide);
+            });
 
-                    document.getElementById('swiper-container').style.display = 'block';
+            document.getElementById('swiper-container').style.display = 'block';
 
-                    if (swiper) {
-                        swiper.update();
-                    } else {
-                        swiper = new Swiper('#swiper-container', {
-                            pagination: {
-                                el: '.swiper-pagination',
-                                clickable: true,
-                            },
-                            navigation: {
-                                nextEl: '.swiper-button-next',
-                                prevEl: '.swiper-button-prev',
-                            },
-                        });
-                    }
+            if (swiper) {
+                swiper.update();
+                swiper.slideTo(0); // Aller à la première diapositive
+            } else {
+                swiper = new Swiper('#swiper-container', {
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
                 });
-            });
-
-            document.getElementById('swiper-container').addEventListener('click', function (event) {
-                if (event.target.id === 'swiper-container') {
-                    this.style.display = 'none';
-                }
-            });
+            }
         });
-    </script>        
+    });
+
+    document.getElementById('swiper-container').addEventListener('click', function (event) {
+        if (event.target.id === 'swiper-container') {
+            this.style.display = 'none';
+        }
+    });
+});
+    </script>    
+    
+    <div class="custom-class">
+        <div class="footer-line footer-line-left"></div>
+        <p>Nous sommes disponibles du lundi au vendredi, de 7h à 12h et de 13h30 à 18h, pour vous servir.</p>
+        <div class="footer-line footer-line-right"></div>
+    </div>
+    
+    <table class="gallery">
+        <tr>
+            <td class="icon">
+                <a target="_blank" href="https://www.google.fr/maps/place/14+Rue+du+Sauvoy,+77165+Saint-Soupplets/@49.0339125,2.800232,17z/data=!3m1!4b1!4m6!3m5!1s0x47e62045f3342ff1:0xe64985a26b36b280!8m2!3d49.0339125!4d2.8028069!16s%2Fg%2F11c4yf_f55?entry=ttu">
+                <img src="images/icons8-google-maps-50.png" alt="Icône 1">
+                </a>
+                <p>14 Bis Rue du Sauvoy</p> 
+                <p>77165 Saint-Soupplets</p>
+                
+            </td>
+            <td class="icon">
+                <a href="mailto:azadbtp@hotmail.com">
+                <img src="images/icons8-courrier-94.png" alt="Icône 2">
+                </a>
+                <p>Mail : contact@francemetal.fr</p>
+                
+            </td>
+            <td class="icon">
+                <img src="images/icons8-volume-de-la-sonnerie-50.png" alt="Icône 3">
+                <p>01 75 78 04 70</p> 
+                <p>06 70 72 55 88</p>
+            </td>
+        </tr>
+    </table>
+    
+
+    
+
+    <script src="script.js"></script>
+    
+      
+      
+
 </body>
 </html>

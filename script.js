@@ -130,13 +130,14 @@ document.querySelector('.custom-container form').addEventListener('submit', func
     const message = document.getElementById('message').value;
 
     // Configuration de l'envoi d'e-mail avec Email.js
-    emailjs.send("service_bvq5oz9", "template_avfkarf", {
+    emailjs.send("service_xxpru7l", "template_avfkarf", {
         from_name: name,
         from_prenom: prenom,
         from_phone: phone,
         from_email: email,
-        message: message
-    }, "rnieE8Gf2U3HWE9Oj")
+        message: message,
+        to_email: "s.barkaoui-france-metal77@outlook.fr" 
+    }, "8iw9LMjjIvMFxlspM")
     .then(function(response) {
         console.log("E-mail envoyé avec succès !", response);
         alert("Votre message a été envoyé avec succès.");
@@ -147,5 +148,3 @@ document.querySelector('.custom-container form').addEventListener('submit', func
         alert("Une erreur est survenue lors de l'envoi de votre message.");
     });
 });
-
-
