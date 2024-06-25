@@ -5,17 +5,18 @@
 .portfolio-section-photos h2 {
   color: #242424;
   margin-bottom: 80px;
+  text-align: center;
 }
 
 .photo-titre {
   text-align: center;
   font-size: 30px;
   color: black;
-  background-color: rgb(25, 128, 224);
+  background-color: rgba(0, 153, 255, 0.89);
   font-family: 'Times New Roman', Times, serif;
-  font-weight:bold;
+  font-weight: bold;
   width: 170px;
-  margin-left: 210px;
+  margin: 0 auto 10px auto; /* Centrer le titre */
   padding: 1px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
@@ -23,7 +24,7 @@
 
 .grid-paysages {
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 2fr 2fr 2fr; /* Conserver le format desktop */
   grid-template-rows: 300px 300px 300px;
   gap: 80px;
 }
@@ -40,6 +41,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  margin-top: 10px;
 }
 
 .lien-conteneur-photo {
@@ -70,19 +72,18 @@
   height: 100%;
   position: fixed;
   top: 0;
-  left: 15;
+  left: 0; /* Correction de la position */
   z-index: 1000;
   background: rgba(0, 0, 0, 0.9);
   display: none;
 }
-.swiper-container img 
-{
-  width: 100%;
-    height: 100vh; /* Ou une autre hauteur en fonction de vos besoins */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+.swiper-container img {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-slide {
@@ -93,8 +94,8 @@
 
 .swiper-slide img {
   max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .swiper-button-next,
@@ -104,5 +105,28 @@
 
 .swiper-pagination-bullet {
   background: white;
-} 
+}
 
+/* Media Queries pour le responsive design */
+@media (max-width: 768px) {
+  .photo-titre {
+    font-size: 24px; /* Réduire la taille du texte pour les petits écrans */
+    width: auto; /* Ajuster la largeur automatiquement */
+    margin: 0 auto 5px auto; /* Ajuster les marges */
+  }
+  
+  .grid-paysages, .grid-portraits {
+    grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+    gap: 20px;
+  }
+
+  .grid-paysages img,
+  .grid-portraits img {
+    height: 250px; /* Réduire légèrement la hauteur des images */
+    margin-bottom: 50px;
+  }
+
+  .portfolio-section-photos h2 {
+    margin-top: 200px;
+  }
+}
