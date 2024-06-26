@@ -1241,6 +1241,10 @@ table td {
         .contenu {
             display: flex;
         }
+
+        .chapitre{
+            margin-left: 160px;
+        }
     
         .titre{
             color: #fff;
@@ -1318,7 +1322,7 @@ table td {
     
         .icone img {
             width: 90px;
-            margin-left: 45%;
+            margin-left: 40%;
         }
     
         .content p {
@@ -1361,6 +1365,33 @@ table td {
         
         .image-container {
             margin-left: 20%;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .gallery tr,
+        .gallery td {
+            display: block;
+            width: 100%;
+        }
+    
+        .gallery .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        .gallery .icon:last-child {
+            border-bottom: none;
+        }
+
+        .custom-container {
+            margin-right: 1px;
         }
     }
 
