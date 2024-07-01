@@ -656,10 +656,20 @@ table td {
     
         .titre {
             color: #fff;
-            margin: 0;
-            font-size: 110%;
+            margin-left:500px;
             white-space: nowrap;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .titre h1{
+            font-size: 30px;
+          
+        }
+        .titre h2{ 
+            word-break: break-word;  /* Permet de casser les mots longs */
+            overflow-wrap: break-word;  /* Permet de casser les mots longs pour s'adapter à la largeur du conteneur */
+            white-space: normal;
+            font-size: 19px;
+
         }
     
         .carousel {
