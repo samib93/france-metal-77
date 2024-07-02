@@ -107,6 +107,24 @@
   background: white;
 }
 
+.swiper-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  background-color: #ff0000; /* Red background color */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.swiper-close-button:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+
+
 /* Media Queries pour le responsive design */
 @media (max-width: 768px) {
   .photo-titre {
