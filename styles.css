@@ -3,6 +3,10 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 }
+@font-face {
+    font-family: 'Lucida Sans';
+    src: url('fonts/LucidaSans.ttf') format('truetype');
+  }
 
 #header {
     background-color: #ffffff;
@@ -37,7 +41,7 @@ body {
 .navbar li {
     display: inline-block;
     margin-right: 35px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 .navbar li:last-child {
