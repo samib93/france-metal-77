@@ -86,11 +86,12 @@ body {
     padding: 8px 15px;
     font-size: 14px;
     cursor: pointer;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 .bouton-contact:hover {
    
-    background-color: #153e63;
+    background-color: #2100df;
     color: #fff;
 }
 
