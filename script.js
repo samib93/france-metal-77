@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (currentIndex > 0) {
             currentIndex--;
             updateCarousel();
-        } metal 77
+        } 
     }
 
     // Met à jour la position du carousel en fonction de l'index actuel
