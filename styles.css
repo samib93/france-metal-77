@@ -79,20 +79,21 @@ body {
 
 .bouton-contact {
     
-    background-color: #448ae6;
-    color: #fff;
+    background-color: #488eeb;
+    color: #ffffff;
     border: none;
     border-radius: 15px;
     padding: 8px 15px;
     font-size: 14px;
     cursor: pointer;
     font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
 }
 
 .bouton-contact:hover {
    
-    background-color: #2100df;
-    color: #fff;
+    background-color: #bebebe;
+    color: #000000;
 }
 
 
