@@ -111,6 +111,7 @@ window.addEventListener('scroll', function() {
 });
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
     var navbarToggle = document.getElementById("navbar-toggle");
     var navbarMenu = document.querySelector(".navbar ul");
