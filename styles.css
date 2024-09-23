@@ -668,6 +668,7 @@ table td {
         }
         .titre h1{
             font-size: 30px;
+            margin-left: 100px;
           
         }
         .titre h2{ 
@@ -675,7 +676,11 @@ table td {
             overflow-wrap: break-word;  /* Permet de casser les mots longs pour s'adapter à la largeur du conteneur */
             white-space: normal;
             font-size: 19px;
+            margin-left: 100px;
 
+        }
+        .bouton-decouvrir{
+            margin-left: px;
         }
     
         .carousel {
@@ -1259,7 +1264,7 @@ table td {
         }
 
         .chapitre{
-            margin-left: 160px;
+            margin-left: 100px;
         }
     
         .titre{
@@ -1369,7 +1374,7 @@ table td {
         }
     
         .image-bas img {
-            margin-left: 80px;
+            margin-left: 50px;
             position: relative;
             top: 230px;
             width: 300px;
