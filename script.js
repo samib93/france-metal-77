@@ -85,6 +85,7 @@ function animateCounters() {
 document.addEventListener('DOMContentLoaded', animateCounters);
 
 
+
 window.addEventListener('scroll', function() {
     // Calculer la progression de la page
     let scrollTop = document.documentElement.scrollTop;
