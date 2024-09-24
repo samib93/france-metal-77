@@ -649,6 +649,12 @@ table td {
             margin-top: 150px;
             width: 100%;
         }
+     
+
+
+        .bouton-decouvrir{
+            margin-left: 20px;
+        }
     
         .image-azad, .image-propos {
             display: none;
@@ -668,7 +674,7 @@ table td {
         }
         .titre h1{
             font-size: 30px;
-            margin-left: 100px;
+            margin-left: 10px;
           
         }
         .titre h2{ 
@@ -676,7 +682,7 @@ table td {
             overflow-wrap: break-word;  /* Permet de casser les mots longs pour s'adapter à la largeur du conteneur */
             white-space: normal;
             font-size: 19px;
-            margin-left: 100px;
+            margin-left: 10px;
 
         }
         .bouton-decouvrir{
@@ -848,7 +854,6 @@ table td {
             margin-top: 150px;
             width: 100%;
         }
-    
         .image-azad {
             display: none;
         }
